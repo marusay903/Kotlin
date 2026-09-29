@@ -1,6 +1,7 @@
 package com.example.project_kozlova.ui.theme
 
 import com.example.project_kozlova.ui.theme.service.ProductService
+import com.example.project_kozlova.ui.theme.service.RecipesService
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -21,4 +22,5 @@ object RetrofitClient {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
     val productService: ProductService=retrofit.create(ProductService::class.java)
+    val recipesService: RecipesService=retrofit.create(RecipesService::class.java)
 }

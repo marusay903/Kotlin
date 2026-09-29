@@ -1,4 +1,4 @@
-package com.example.project_kozlova.ui.theme.data
+package com.example.project_kozlova.data
 
 data class ProductResponce(
     val products: List<Products>

@@ -1,4 +1,4 @@
-package com.example.project_kozlova.ui.theme.viewModel
+package com.example.project_kozlova.viewModel
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
@@ -10,7 +10,8 @@ class ProductsViewModel: ViewModel() {
     fun fetchProduct (){
         viewModelScope.launch {
             try {
-                val productResponce= RetrofitClient.productService.getProduct().products
+                val responce=RetrofitClient.productService.getProduct()
+                val productResponce= responce.products
                 for (product in productResponce) {
                     Log.d("ProductViewModel",
                         "title:${product.title},"+
