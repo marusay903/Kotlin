@@ -5,9 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.project_kozlova.data.Ingredients
-import com.example.project_kozlova.data.Recipes
-import com.example.project_kozlova.viewModel.ProductsViewModel
+import com.example.project_kozlova.data.Recipe
 import com.example.project_kozlova.viewModel.RecipesViewModel
 
 class MainActivity : ComponentActivity() {
@@ -18,11 +16,11 @@ class MainActivity : ComponentActivity() {
 //            val productsViewModel: ProductsViewModel = viewModel()
 //            productsViewModel.fetchProduct()
             val recipesViewModel: RecipesViewModel=viewModel()
-            val newRecipe= Recipes(
+            val newRecipe= Recipe(
                 name = "Куриное филе в сливочно-чесночном соусе",
-                ingredients = Ingredients(listOf("Куриное филе","сливки","чеснок",
+                ingredients = listOf("Куриное филе","сливки","чеснок",
                     "сливочное масло","растительное масло","твердый сыр",
-                    "соль","черный перец","итальянские травы")),
+                    "соль","черный перец","итальянские травы"),
                 cookTimeMinutes = 25,
                 difficulty = "Easy"
             )

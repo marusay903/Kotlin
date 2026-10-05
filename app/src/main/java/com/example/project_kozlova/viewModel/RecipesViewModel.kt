@@ -2,13 +2,13 @@ package com.example.project_kozlova.viewModel
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
-import com.example.project_kozlova.data.Recipes
+import com.example.project_kozlova.data.Recipe
 import androidx.lifecycle.viewModelScope
 import com.example.project_kozlova.ui.theme.RetrofitClient
 import kotlinx.coroutines.launch
 
 class RecipesViewModel: ViewModel(){
-    fun addRecipes (recipe: Recipes) {
+    fun addRecipes (recipe: Recipe) {
         viewModelScope.launch {
             try {
                 val newRecipe = RetrofitClient.recipesService.addRecipe(recipe)
