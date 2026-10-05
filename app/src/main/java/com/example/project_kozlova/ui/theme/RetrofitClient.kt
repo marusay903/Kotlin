@@ -2,6 +2,7 @@ package com.example.project_kozlova.ui.theme
 
 import com.example.project_kozlova.ui.theme.service.ProductService
 import com.example.project_kozlova.ui.theme.service.RecipesService
+import com.example.project_kozlova.ui.theme.service.UserService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -28,4 +29,6 @@ object RetrofitClient {
         .build()
     val productService: ProductService=retrofit.create(ProductService::class.java)
     val recipesService: RecipesService=retrofit.create(RecipesService::class.java)
+
+    val userService: UserService = retrofit.create(RecipesService::class.java) as UserService
 }
