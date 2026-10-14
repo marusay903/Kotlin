@@ -21,6 +21,7 @@ class PostViewModel: ViewModel() {
                             "\nviews: ${deletePost.views}"+
                             "\nuserId: ${deletePost.userId}"
                 )
+
             }
             catch (ex: Exception) {
                 Log.d("PostViewModel","${ex.message}",

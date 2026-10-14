@@ -27,11 +27,12 @@ class MainActivity : ComponentActivity() {
 //                difficulty = "Easy"
            // )
             //recipesViewModel.addRecipes(newRecipe)
-            val userViewModel: UserViewModel = viewModel()
-            userViewModel.updateUser(id = 15)
+            //pr16:
+           // val userViewModel: UserViewModel = viewModel()
+           // userViewModel.updateUser(id = 15)
             //pr17:
-           // val postViewModel: PostViewModel=viewModel()
-           // postViewModel.deletePost(30)
+            val postViewModel: PostViewModel=viewModel()
+            postViewModel.deletePost(30)
         }
     }
 }
