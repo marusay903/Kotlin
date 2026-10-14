@@ -9,6 +9,6 @@ data class Post(
     val tags: List <String>?=null,
     val reactions: Reactions?=null,
     val views: Int?=null,
-    val userId: Int,
+    val userId: Int
     //val deleted:
 )
