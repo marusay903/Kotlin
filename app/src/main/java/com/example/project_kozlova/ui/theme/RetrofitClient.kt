@@ -1,5 +1,6 @@
 package com.example.project_kozlova.ui.theme
 
+import com.example.project_kozlova.ui.theme.service.PostService
 import com.example.project_kozlova.ui.theme.service.ProductService
 import com.example.project_kozlova.ui.theme.service.RecipesService
 import com.example.project_kozlova.ui.theme.service.UserService
@@ -29,6 +30,6 @@ object RetrofitClient {
         .build()
     val productService: ProductService=retrofit.create(ProductService::class.java)
     val recipesService: RecipesService=retrofit.create(RecipesService::class.java)
-
     val userService: UserService = retrofit.create(UserService::class.java) as UserService
+    val postService: PostService=retrofit.create(PostService::class.java)
 }
