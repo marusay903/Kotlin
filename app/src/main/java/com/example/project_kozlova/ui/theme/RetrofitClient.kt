@@ -30,5 +30,5 @@ object RetrofitClient {
     val productService: ProductService=retrofit.create(ProductService::class.java)
     val recipesService: RecipesService=retrofit.create(RecipesService::class.java)
 
-    val userService: UserService = retrofit.create(RecipesService::class.java) as UserService
+    val userService: UserService = retrofit.create(UserService::class.java) as UserService
 }
