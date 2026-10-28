@@ -1,6 +1,5 @@
 package com.example.project_kozlova.data
 
-import android.R
 
 data class Post(
     val id: Int?=null,
@@ -9,6 +8,6 @@ data class Post(
     val tags: List <String>?=null,
     val reactions: Reactions?=null,
     val views: Int?=null,
-    val userId: Int
-    //val deleted:
+    val userId: Int,
+    val deleted: Boolean
 )

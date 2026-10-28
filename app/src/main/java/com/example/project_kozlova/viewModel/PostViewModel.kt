@@ -19,7 +19,8 @@ class PostViewModel: ViewModel() {
                             "\ntags: ${deletePost.tags}"+
                             "\nreactions: ${deletePost.reactions}"+
                             "\nviews: ${deletePost.views}"+
-                            "\nuserId: ${deletePost.userId}"
+                            "\nuserId: ${deletePost.userId}"+
+                            "\ndeleted:${deletePost.deleted}"
                 )
 
             }
