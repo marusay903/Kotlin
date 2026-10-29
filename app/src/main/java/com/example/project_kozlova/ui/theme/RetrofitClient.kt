@@ -1,13 +1,16 @@
 package com.example.project_kozlova.ui.theme
 
+import com.example.project_kozlova.ui.theme.service.AuthService
 import com.example.project_kozlova.ui.theme.service.PostService
 import com.example.project_kozlova.ui.theme.service.ProductService
 import com.example.project_kozlova.ui.theme.service.RecipesService
+import com.example.project_kozlova.ui.theme.service.TodoService
 import com.example.project_kozlova.ui.theme.service.UserService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 import java.net.InetSocketAddress
 import java.net.Proxy
 
@@ -28,8 +31,17 @@ object RetrofitClient {
         .client(okHttpClient)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
+    val api = Retrofit.Builder()
+        .baseUrl("http://10.207.106.59:8090/api/")
+        .client(okHttpClient)
+        .addConverterFactory(GsonConverterFactory.create())
+        .build()
     val productService: ProductService=retrofit.create(ProductService::class.java)
     val recipesService: RecipesService=retrofit.create(RecipesService::class.java)
     val userService: UserService = retrofit.create(UserService::class.java) as UserService
     val postService: PostService=retrofit.create(PostService::class.java)
+
+    val todoService: TodoService=retrofit.create(TodoService::class.java)
+    val authService: AuthService=retrofit.create(AuthService::class.java)
+
 }
