@@ -41,7 +41,7 @@ object RetrofitClient {
     val userService: UserService = retrofit.create(UserService::class.java) as UserService
     val postService: PostService=retrofit.create(PostService::class.java)
 
-    val todoService: TodoService=retrofit.create(TodoService::class.java)
-    val authService: AuthService=retrofit.create(AuthService::class.java)
+    val todoService: TodoService=api.create(TodoService::class.java)
+    val authService: AuthService=api.create(AuthService::class.java)
 
 }
