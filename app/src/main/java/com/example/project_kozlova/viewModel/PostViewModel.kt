@@ -25,7 +25,7 @@ class PostViewModel: ViewModel() {
 
             }
             catch (ex: Exception) {
-                Log.d("PostViewModel","${ex.message}",
+                Log.d("PostViewModel","${ex.message}"
 
                 )
             }
