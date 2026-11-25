@@ -17,7 +17,7 @@ class LoginViewModel : ViewModel(){
               authResponce.token.let { token->
                   val todoResponce= RetrofitClient.todoService.getTodos(token = "$token")
 
-                  todoResponce.items?.forEach { item->
+                  todoResponce.items.forEach { item->
                       Log.d("LoginViewModel",
                           "id: ${item.id}"+
                           "\ntodo: ${item.todo}"+

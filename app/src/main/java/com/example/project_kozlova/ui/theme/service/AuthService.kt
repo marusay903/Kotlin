@@ -7,6 +7,6 @@ import retrofit2.http.Body
 import retrofit2.http.POST
 
 interface AuthService {
-    @POST("api/collections/users/auth-with-password")
+    @POST("users/auth-with-password")
     suspend fun authWidthPassword(@Body authRequest: AuthRequest): AuthResponce
 }

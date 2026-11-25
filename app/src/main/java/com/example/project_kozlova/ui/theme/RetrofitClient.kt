@@ -10,7 +10,6 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import java.net.InetSocketAddress
 import java.net.Proxy
 
@@ -32,7 +31,7 @@ object RetrofitClient {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
     val api = Retrofit.Builder()
-        .baseUrl("http://10.207.106.59:8090/api/")
+        .baseUrl("http://10.207.106.59:8090/api/collections/")
         .client(okHttpClient)
         .addConverterFactory(GsonConverterFactory.create())
         .build()

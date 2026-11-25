@@ -5,7 +5,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.project_kozlova.data.AuthRequest
 import com.example.project_kozlova.data.Recipe
+import com.example.project_kozlova.ui.theme.RetrofitClient
+import com.example.project_kozlova.viewModel.LoginViewModel
 import com.example.project_kozlova.viewModel.PostViewModel
 import com.example.project_kozlova.viewModel.RecipesViewModel
 import com.example.project_kozlova.viewModel.UserViewModel
@@ -31,8 +34,12 @@ class MainActivity : ComponentActivity() {
            // val userViewModel: UserViewModel = viewModel()
            // userViewModel.updateUser(id = 15)
             //pr17:
-            val postViewModel: PostViewModel=viewModel()
-            postViewModel.deletePost(30)
+//            val postViewModel: PostViewModel=viewModel()
+//            postViewModel.deletePost(30)
+           // pr18:
+              val loginViewModel: LoginViewModel= viewModel()
+              val authRequest= AuthRequest(identity = "admin@example.com", password = "123456789")
+             loginViewModel.login(authRequest)
         }
     }
 }
